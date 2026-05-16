@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Nestring Foods</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --olive:  #4a5240;
+    --cream:  #faf7f0;
+    --warm:   #f0e8d5;
+    --gold:   #c8963e;
+    --text:   #2a2a1e;
+    --muted:  #7a7a6a;
+    --border: #ddd5c0;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  header {
+    background: var(--olive);
+    color: white;
+    padding: 60px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 40px,
+      rgba(255,255,255,.03) 40px, rgba(255,255,255,.03) 80px
+    );
+  }
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    position: relative;
+  }
+  .brand span { color: var(--gold); }
+  .tagline {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.65);
+    margin-top: 8px;
+    position: relative;
+  }
+  .policy-title {
+    margin-top: 32px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    position: relative;
+  }
+  .last-updated {
+    font-size: 13px;
+    color: rgba(255,255,255,.5);
+    margin-top: 8px;
+    position: relative;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .intro-box {
+    background: var(--warm);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    font-size: 15px;
+  }
+
+  section { margin-bottom: 44px; }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--olive);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--gold);
+    color: white;
+    border-radius: 50%;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  p { margin-bottom: 14px; color: #3a3a2e; }
+
+  ul {
+    list-style: none;
+    margin: 10px 0 14px 0;
+  }
+  ul li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    color: #3a3a2e;
+  }
+  ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .highlight {
+    background: var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: 15px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .rule-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .rule-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--olive);
+    margin-bottom: 8px;
+  }
+
+  .contact-card {
+    background: var(--olive);
+    color: white;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 16px;
+  }
+  .contact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: var(--gold);
+  }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,.85);
+  }
+  .contact-row .icon { font-size: 18px; flex-shrink: 0; }
+
+  .link-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .link-row a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+  }
+
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,.5);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+  footer strong { color: var(--gold); }
+
+  @media (max-width: 600px) {
+    .container { padding: 36px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Nestring <span>Foods</span></div>
+  <div class="tagline">Fresh Meals · Great Taste</div>
+  <div class="policy-title">Terms of Service</div>
+  <div class="last-updated">Last updated: May 16, 2026</div>
+</header>
+
+<div class="container">
+
+  <div class="intro-box">
+    Please read these Terms of Service carefully before placing an order with <strong>Nestring Foods</strong> through our WhatsApp ordering service. By sending us a message to place an order, you agree to be bound by these terms.
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <h2><span class="num">1</span> About Nestring Foods</h2>
+    <p><strong>Nestring Foods</strong> is a food delivery and takeaway service based in Kenya. We prepare and deliver fresh meals to customers who place orders through our WhatsApp Business number.</p>
+    <p>Our service is available to customers within our designated delivery areas. We reserve the right to decline orders outside our service area.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <h2><span class="num">2</span> Placing an Order</h2>
+    <p>Orders are placed through our WhatsApp ordering bot or directly with our team. By placing an order you confirm that:</p>
+    <ul>
+      <li>You are at least 13 years of age</li>
+      <li>The delivery address you provide is accurate and within our service area</li>
+      <li>You are authorised to use the payment method you provide</li>
+      <li>All information you provide is truthful and accurate</li>
+    </ul>
+    <div class="highlight">
+      An order is confirmed only after we send you a confirmation message with your Order ID. Until then, we reserve the right to decline or modify any order.
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <h2><span class="num">3</span> Pricing & Menu</h2>
+    <ul>
+      <li>All prices are listed in <strong>Kenya Shillings (KES)</strong> and are inclusive of applicable taxes</li>
+      <li>Prices are as displayed at the time of ordering — we honour the price shown when you order</li>
+      <li>Menu items and prices may change without prior notice</li>
+      <li>Delivery charges (if any) will be communicated before order confirmation</li>
+      <li>We reserve the right to correct pricing errors — we will notify you before processing</li>
+    </ul>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <h2><span class="num">4</span> Payment</h2>
+    <p>We accept the following payment methods:</p>
+    <ul>
+      <li><strong>M-Pesa</strong> — Pay to our Till Number (Buy Goods). Send your M-Pesa confirmation code after payment</li>
+      <li><strong>M-Pesa STK Push</strong> — We send a payment prompt directly to your phone</li>
+      <li><strong>Cash on Delivery</strong> — Pay the rider when your order arrives</li>
+    </ul>
+
+    <div class="rule-box">
+      <h3>Payment Rules</h3>
+      <ul>
+        <li>Payment must be completed before dispatch for M-Pesa orders</li>
+        <li>Your order is only confirmed once payment is verified</li>
+        <li>We are not responsible for failed M-Pesa transactions caused by network issues or Safaricom downtime</li>
+        <li>If you overpay, we will refund the difference via M-Pesa within 3 business days</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <h2><span class="num">5</span> Delivery</h2>
+    <ul>
+      <li>Estimated delivery times are provided as a guide only — actual times may vary due to traffic, weather, or high demand</li>
+      <li>You will receive a WhatsApp notification when your order is dispatched</li>
+      <li>You must be available at the delivery address to receive your order</li>
+      <li>If you are unreachable after 2 attempts, the order may be returned and no refund issued for COD orders</li>
+      <li>Risk of the food passes to you upon delivery</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Same-day delivery:</strong> Orders placed before 12:00 PM. Orders after 12:00 PM are fulfilled the next day unless express delivery is arranged.
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <h2><span class="num">6</span> Cancellations & Changes</h2>
+
+    <div class="rule-box">
+      <h3>Cancellation by Customer</h3>
+      <ul>
+        <li>You may cancel an order within <strong>30 minutes</strong> of placing it by contacting us on WhatsApp</li>
+        <li>Orders cannot be cancelled once they have been dispatched</li>
+        <li>For prepaid (M-Pesa) orders cancelled within 30 minutes, a full refund will be issued within 3–5 business days</li>
+      </ul>
+    </div>
+
+    <div class="rule-box">
+      <h3>Cancellation by Nestring Foods</h3>
+      <ul>
+        <li>We may cancel an order if an item is unavailable, the delivery area is unreachable, or payment cannot be verified</li>
+        <li>We will notify you immediately and issue a full refund if payment was received</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <h2><span class="num">7</span> Refunds & Complaints</h2>
+    <p>We take food quality seriously. If there is a problem with your order:</p>
+    <ul>
+      <li>Contact us on WhatsApp within <strong>2 hours</strong> of receiving the order</li>
+      <li>Provide your Order ID and a description or photo of the issue</li>
+      <li>We will offer a replacement, credit, or refund at our discretion</li>
+      <li>Refunds are processed via M-Pesa within <strong>3–5 business days</strong></li>
+    </ul>
+    <p>We do not offer refunds for:</p>
+    <ul>
+      <li>Change of mind after dispatch</li>
+      <li>Incorrect delivery address provided by the customer</li>
+      <li>Orders refused at the door without valid reason</li>
+    </ul>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <h2><span class="num">8</span> Food Allergies & Dietary Requirements</h2>
+    <div class="highlight">
+      ⚠️ Our kitchen handles a wide variety of ingredients including nuts, gluten, dairy, eggs, and meat products. We cannot guarantee that any item is completely free from allergens. If you have a severe allergy, please contact us directly before ordering.
+    </div>
+    <p>We will do our best to accommodate dietary requirements but cannot guarantee complete separation of ingredients in our kitchen environment.</p>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <h2><span class="num">9</span> Acceptable Use of WhatsApp Service</h2>
+    <p>When using our WhatsApp ordering service, you agree not to:</p>
+    <ul>
+      <li>Send abusive, threatening, or offensive messages to our team</li>
+      <li>Provide false delivery addresses or payment information</li>
+      <li>Place orders with no intention to pay</li>
+      <li>Attempt to manipulate our ordering system or bot</li>
+      <li>Share our business WhatsApp number for purposes other than ordering</li>
+    </ul>
+    <p>We reserve the right to block numbers that violate these terms and report abuse to the relevant authorities.</p>
+  </section>
+
+  <!-- 10 -->
+  <section>
+    <h2><span class="num">10</span> Limitation of Liability</h2>
+    <p>To the maximum extent permitted by Kenyan law, Nestring Foods shall not be liable for:</p>
+    <ul>
+      <li>Delays caused by circumstances beyond our control (traffic, weather, power outages)</li>
+      <li>Allergic reactions where allergen information was requested and provided accurately</li>
+      <li>Loss or damage caused by incorrect address information provided by the customer</li>
+      <li>WhatsApp service interruptions or Meta platform outages</li>
+      <li>M-Pesa transaction failures caused by Safaricom network issues</li>
+    </ul>
+    <p>Our total liability to you shall not exceed the amount paid for the specific order in question.</p>
+  </section>
+
+  <!-- 11 -->
+  <section>
+    <h2><span class="num">11</span> Privacy</h2>
+    <p>Your use of our service is also governed by our <strong>Privacy Policy</strong>, which explains how we collect, use, and protect your personal information.</p>
+    <div class="link-row">
+      <a href="./index.html">← Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section>
+    <h2><span class="num">12</span> Changes to These Terms</h2>
+    <p>We may update these Terms of Service at any time. The updated version will be posted on this page with a new "Last updated" date. Continued use of our ordering service after changes means you accept the new terms.</p>
+    <p>For significant changes, we will notify active customers via WhatsApp where possible.</p>
+  </section>
+
+  <!-- 13 -->
+  <section>
+    <h2><span class="num">13</span> Governing Law</h2>
+    <p>These terms are governed by the laws of the <strong>Republic of Kenya</strong>. Any disputes arising from these terms or your use of our service shall be subject to the jurisdiction of the Kenyan courts.</p>
+  </section>
+
+  <!-- 14 -->
+  <section>
+    <h2><span class="num">14</span> Contact Us</h2>
+    <p>If you have questions about these terms, please reach out:</p>
+    <div class="contact-card">
+      <h3>Nestring Foods</h3>
+      <div class="contact-row"><span class="icon">📍</span> Kenya</div>
+      <div class="contact-row"><span class="icon">📲</span> WhatsApp: +254 700 000 000</div>
+      <div class="contact-row"><span class="icon">⏰</span> Monday – Saturday, 7:00 AM – 9:00 PM</div>
+    </div>
+    <div class="link-row" style="margin-top:24px">
+      <a href="./index.html">Privacy Policy</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2026 <strong>Nestring Foods</strong>. All rights reserved. &nbsp;|&nbsp; Kenya
+</footer>
+
+</body>
+</html>
